@@ -10,7 +10,7 @@ def haversine_np(lon1, lat1, lon2, lat2):
     c = 2 * np.arcsin(np.sqrt(a))
     km = 6367 * c
     return km
-# 哈夫曼距离
+# 曼哈顿距离
 def hafuman_km(lon1, lat1, lon2, lat2):
     return haversine_np(lon1,lat1,lon2,lat1) + haversine_np(lon2,lat1,lon2,lat2)
 
@@ -21,8 +21,6 @@ def mode_function(df):
     # print df
     counts = mode(df) 
     return counts[0][0] / 10000
-
-
 
 
 def get_features_list():
