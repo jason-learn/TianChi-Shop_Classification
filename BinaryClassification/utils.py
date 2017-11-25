@@ -70,7 +70,7 @@ def get_features_list():
 
 def time_map(time):
     time = int(time)
-    if (time >= 23) & (time <=6):
+    if (time >= 23) | (time <=6):
         return 0
     elif (time >=7) & (time<=10):
         return 1
