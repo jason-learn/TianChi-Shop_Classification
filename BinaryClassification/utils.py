@@ -35,35 +35,34 @@ def bearing_array(lat1, lng1, lat2, lng2):
 
 def get_features_list():
     features = [
-                # 原始特征 0 - 4
+                # 原始特征 
                 'bsCount','category_id','mall_id','price','connect',
-                # 偏差特征 5 - 10 
+                # 偏差特征 
                 'c_wifi_var','wifi_var','angle_var','sb_wifi_var','s_wifi_var','c_sb_wifi_var',
                 # 'sb_history_avg_power',c_sb_history_avg_power'
-                # 时间特征 11
+                # 时间特征 
                 'current_hour',
-                # 范围角度特征 12 - 15
-                'distance','s_median_scale','current_bearing_array','history_bearing_array_median',
-                # 统计特征 16
-                'wifi_cover_shop',
-                # 比例特征 17 - 18
-                'shop_wifi_connect_ratio','tfid_features',
-                # 其他特征 19 - 20
-                'nature_order',
-                'w_std_power',
-                # 
-                's_sb_wifi_var_ratio',
-                # 时间历史热度
-                # '1_shop_hot','3_shop_hot', '5_shop_hot', '7_shop_hot'
+                # 范围角度特征
+                'distance','s_median_scale','current_bearing_array','history_bearing_array_median',   
 
-                #我们自己添加的feature
+                #用户特征
                 'p_avg_price',
+                #用户与店铺交互特征
                 'p_shop_favor',
+                #店铺特征
                 's_hot',
                 'r_mean',
                 'wifirank_diff',
                 's_conncectwifi_count'
-
+     
+                'nature_order',
+                'w_std_power', 
+                's_sb_wifi_var_ratio',
+     
+                # 统计特征
+                'wifi_cover_shop',
+                # 比例特征 
+                'shop_wifi_connect_ratio','tfid_features',
                 ]
       
     return features
